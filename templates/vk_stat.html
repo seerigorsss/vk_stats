@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+<!-- Расширяем базовый шаблон base.html-->
+{% block content %}
+
+    <!-- Создаем таблицу для активностей -->
+    <h2 class="text-primary">Activities</h2>
+    <table class="table table-hover table-primary">
+        {% for key in activity %}
+            <tbody>
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ key }}</td>
+                <td>{{ activity[key] }}</td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+
+    <!-- Создаем таблицу для возрастов -->
+    <h2 class="text-success">Ages</h2>
+    <table class="table table-hover table-success">
+        {% for key in ages %}
+            <tbody>
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ key }}</td>
+                <td>{{ ages[key] }}</td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+
+    <!-- Создаем таблицу для городов -->
+    <h2 class="text-danger">Cities</h2>
+    <table class="table table-hover table-danger">
+        {% for key in cities %}
+            <tbody>
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ key }}</td>
+                <td>{{ cities[key] }}</td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+BOT_TOKEN = "token"
+GROUP_ID = "group_id"
+ALBUM_ID = "album_id"
+LOGIN = "login"
+PASSWORD = "password"
